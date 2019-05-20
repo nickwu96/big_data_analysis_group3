@@ -4,7 +4,7 @@
 import pandas as pd
 import time
 
-folder = r'D:\Python\big_data\\'  # 设置工作目录
+folder = r'D:\Python\big_data_analysis_group3\\'  # 设置工作目录
 new_data = []  # new_data用来存储清洗后新的数据
 year = (2017-1960) + 1  # year为数据包含的年份数量
 
@@ -37,7 +37,7 @@ def write_data():
         new_data[i].to_excel(writer, sheet_name=str(1960+i), header=True, index=False)
     writer.save()
     writer.close()
-    log('write','导出数据成功：{}'.format(folder + 'Result.xls'))
+    log('write','导出数据成功：{}\n'.format(folder + 'Result.xls'))
     return None
 
 def log(mode, content):
