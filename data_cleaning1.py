@@ -4,6 +4,7 @@
 import pandas as pd
 import time
 
+# data_cleaning1.py用以清洗数据，生成行为国家，列为指标，每一个sheet为每一年的excel文件
 folder = r'D:\Python\big_data_analysis_group3\\'  # 设置工作目录
 new_data = []  # new_data用来存储清洗后新的数据
 year = (2017-1960) + 1  # year为数据包含的年份数量
@@ -18,7 +19,7 @@ def initiate_new_data():  # initiate_new_data函数用以初始化new_data这个
         country_name.append(i.split()[0])  #country_name列表存储国家名字
         country_code.append(i.split()[1])  #country_code列表存储国家代码
     for i in range(year):  # 对new_data的每一个元素初始化，使DataFrame的前两列初始化为国家名和国家代码
-        new_data.append(pd.DataFrame({'国家名':country_name, '国家代码':country_code}))
+        new_data.append(pd.DataFrame({'国家名':country_name, '国家代码':country_code}, index=country_name))
     return None
 
 def read_data(name, file):
@@ -26,7 +27,12 @@ def read_data(name, file):
     log('read', (name, file))
     data = pd.read_excel(folder + 'raw data\\' + file, 'Data', header=3)  #读取指标对应的excel文件，header=3意思是表头在第3行
     for i in range(year):
-        new_data[i][name] = data[str(1960 + i)]  # new_data每一个元素为一个DataFrame，添加一列名为name，数据来源于data中对应年份的列
+        new_data[i][name] = None  # 新建一个以该指标明为索引的列
+        for j in range(data.shape[0]):  # 穷举data的每一行数据，shape[0]获取DataFrame的行数
+            try:
+                new_data[i].loc[data.iloc[j, 0]][name] = data.iloc[j][str(1960+i)]  # 尝试搜索new_data[i]里是否有这个国家，如果没有的话则不添加该国家数据
+            except:
+                pass
     return None
 
 def write_data():
@@ -63,7 +69,8 @@ if __name__ == '__main__':
     initiate_new_data()  # 初始化new_data，用以存储清洗后的数据
 
     # 接下来依次读取每个文件的数据
-    for i in files:
-        read_data(i.split()[0], i.split()[1])  #依次将指标名、指标文件位置传入read_files函数
+    #for i in files:
+        #read_data(i.split()[0], i.split()[1])  #依次将指标名、指标文件位置传入read_files函数
+    read_data(files[0].split()[0], files[0].split()[1])
 
     write_data()  #将数据输出到结果excel里

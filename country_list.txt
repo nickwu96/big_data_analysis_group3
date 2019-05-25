@@ -1,9 +1,6 @@
-阿鲁巴	ABW
-阿富汗	AFG
 安哥拉	AGO
 阿尔巴尼亚	ALB
 安道尔共和国	AND
-阿拉伯联盟国家	ARB
 阿拉伯联合酋长国	ARE
 阿根廷	ARG
 亚美尼亚	ARM
