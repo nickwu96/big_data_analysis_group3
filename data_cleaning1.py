@@ -38,7 +38,7 @@ def read_data(name, file):
 def write_data():
     # 利用pandas的ExcelWriter将结果输出到结果excel里
     log('write','正在导出数据...')
-    writer = pd.ExcelWriter(folder + "Result.xls")
+    writer = pd.ExcelWriter(folder[:-10] + "结果.xls")
     for i in range(year):
         new_data[i].to_excel(writer, sheet_name=str(1960+i), header=True, index=False)
     writer.save()
@@ -48,7 +48,7 @@ def write_data():
 
 def log(mode, content):
     # 产生日志文件
-    f = open(folder + 'log.txt', 'a+')
+    f = open(folder[:-10] + 'log.txt', 'a+')
     if mode == 'init':
         localtime = time.asctime(time.localtime(time.time()))
         f.writelines('运行时间：{}\n'.format(localtime))
