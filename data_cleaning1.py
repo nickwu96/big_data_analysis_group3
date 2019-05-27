@@ -7,11 +7,12 @@ import time
 # data_cleaning1.py用以清洗数据，生成行为国家，列为指标，每一个sheet为每一年的excel文件
 folder = r'D:\Python\big_data_analysis_group3\raw data\\'  # 设置工作目录
 new_data = []  # new_data用来存储清洗后新的数据
-year = (2017-1960) + 1  # year为数据包含的年份数量
+start_year, end_year = 1980, 2017
+year = end_year - start_year + 1 # year为数据包含的年份数量
 
 def initiate_new_data():  # initiate_new_data函数用以初始化new_data这个列表
     # new_data列表每一个元素代表一个年份，每一个元素是pd.DataFrame，每一行代表一个国家，每一列代表一个指标
-    f = open(folder + '国家列表.csv', encoding='utf-8')  #打开文件country_list.txt，该文件用以存储所有的国家列表
+    f = open(folder + '国家列表.csv')  #打开文件country_list.txt，该文件用以存储所有的国家列表
     country_list = f.readlines()  #读入临时数据country_list
     f.close()
     country_name, country_code = [], []  # country_name和country_code分别存储国家名与国家代码
@@ -30,7 +31,7 @@ def read_data(name, file):
         new_data[i][name] = None  # 新建一个以该指标明为索引的列
         for j in range(data.shape[0]):  # 穷举data的每一行数据，shape[0]获取DataFrame的行数
             try:
-                new_data[i].loc[data.iloc[j, 0]][name] = data.iloc[j][str(1960+i)]  # 尝试搜索new_data[i]里是否有这个国家，如果没有的话则不添加该国家数据
+                new_data[i].loc[data.iloc[j, 0]][name] = data.iloc[j][str(start_year+i)]  # 尝试搜索new_data[i]里是否有这个国家，如果没有的话则不添加该国家数据
             except:
                 pass
     return None
@@ -38,9 +39,9 @@ def read_data(name, file):
 def write_data():
     # 利用pandas的ExcelWriter将结果输出到结果excel里
     log('write','正在导出数据...')
-    writer = pd.ExcelWriter(folder + "Result.xls")
+    writer = pd.ExcelWriter(folder[:-10] + "Result.xls")
     for i in range(year):
-        new_data[i].to_excel(writer, sheet_name=str(1960+i), header=True, index=False)
+        new_data[i].to_excel(writer, sheet_name=str(start_year+i), header=True, index=False)
     writer.save()
     writer.close()
     log('write','导出数据成功：{}\n'.format(folder + 'Result.xls'))
@@ -48,7 +49,7 @@ def write_data():
 
 def log(mode, content):
     # 产生日志文件
-    f = open(folder + 'log.txt', 'a+')
+    f = open(folder[:-10] + 'log.txt', 'a+')
     if mode == 'init':
         localtime = time.asctime(time.localtime(time.time()))
         f.writelines('运行时间：{}\n'.format(localtime))
