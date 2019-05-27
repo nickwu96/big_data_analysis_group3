@@ -109,3 +109,150 @@
 正在导出数据...
 导出数据成功：D:\Python\big_data_analysis_group3\raw data\\Result.xls
 
+运行时间：Mon May 27 15:21:41 2019
+正在读取指标：利差（贷款利率减去存款利率，百分比）
+正在读取文件：1-API_FR.INR.LNDP_DS2_zh_excel_v2_10580302.xls
+正在读取指标：存款利率
+正在读取文件：2-API_FR.INR.DPST_DS2_zh_excel_v2_10578187.xls
+正在读取指标：股票交易总额（占国民生产总值（GDP）的比例）
+正在读取文件：3-API_CM.MKT.TRAD.GD.ZS_DS2_zh_excel_v2_10579127.xls
+正在读取指标：商品出口（现价美元）
+正在读取文件：4-API_TX.VAL.MRCH.CD.WT_DS2_zh_excel_v2_10578296.xls
+正在读取指标：商品进口（现价美元）
+正在读取文件：5-API_TM.VAL.MRCH.CD.WT_DS2_zh_excel_v2_10578328.xls
+正在读取指标：国际旅游，收入（占总出口的百分比）
+正在读取文件：6-API_ST.INT.RCPT.XP.ZS_DS2_zh_excel_v2_10580016.xls
+正在读取指标：国际旅游，支出（占总进口的百分比）
+正在读取文件：7-API_ST.INT.XPND.MP.ZS_DS2_zh_excel_v2_10588128.xls
+正在读取指标：高科技出口（现价美元）
+正在读取文件：8-API_TX.VAL.TECH.CD_DS2_zh_excel_v2_10578375.xls
+正在读取指标：劳动力参与率，男性（占15岁以上男性人口的百分比）
+正在读取文件：9-API_SL.TLF.CACT.MA.ZS_DS2_zh_excel_v2_10597938.xls
+正在读取指标：工业男性就业人员（占男性就业的百分比）
+正在读取文件：10-API_SL.IND.EMPL.MA.ZS_DS2_zh_excel_v2_10598958.xls
+正在读取指标：城市化率
+正在读取文件：11-城市化率.xls
+正在读取指标：抚养比
+正在读取文件：12-抚养比.xls
+正在读取指标：铁路总公里数
+正在读取文件：13-铁路总公里数.xls
+正在读取指标：通电率（占人口的百分比）
+正在读取文件：14-API_EG.ELC.ACCS.ZS_DS2_zh_excel_v2_10578337.xls
+正在导出数据...
+导出数据成功：D:\Python\big_data_analysis_group3\raw data\\Result.xls
+
+运行时间：Mon May 27 15:24:52 2019
+正在读取指标：利差（贷款利率减去存款利率，百分比）
+正在读取文件：1-API_FR.INR.LNDP_DS2_zh_excel_v2_10580302.xls
+正在读取指标：存款利率
+正在读取文件：2-API_FR.INR.DPST_DS2_zh_excel_v2_10578187.xls
+正在读取指标：股票交易总额（占国民生产总值（GDP）的比例）
+正在读取文件：3-API_CM.MKT.TRAD.GD.ZS_DS2_zh_excel_v2_10579127.xls
+正在读取指标：商品出口（现价美元）
+正在读取文件：4-API_TX.VAL.MRCH.CD.WT_DS2_zh_excel_v2_10578296.xls
+正在读取指标：商品进口（现价美元）
+正在读取文件：5-API_TM.VAL.MRCH.CD.WT_DS2_zh_excel_v2_10578328.xls
+正在读取指标：国际旅游，收入（占总出口的百分比）
+正在读取文件：6-API_ST.INT.RCPT.XP.ZS_DS2_zh_excel_v2_10580016.xls
+正在读取指标：国际旅游，支出（占总进口的百分比）
+正在读取文件：7-API_ST.INT.XPND.MP.ZS_DS2_zh_excel_v2_10588128.xls
+正在读取指标：高科技出口（现价美元）
+正在读取文件：8-API_TX.VAL.TECH.CD_DS2_zh_excel_v2_10578375.xls
+正在读取指标：劳动力参与率，男性（占15岁以上男性人口的百分比）
+正在读取文件：9-API_SL.TLF.CACT.MA.ZS_DS2_zh_excel_v2_10597938.xls
+正在读取指标：工业男性就业人员（占男性就业的百分比）
+正在读取文件：10-API_SL.IND.EMPL.MA.ZS_DS2_zh_excel_v2_10598958.xls
+正在读取指标：城市化率
+正在读取文件：11-城市化率.xls
+正在读取指标：抚养比
+正在读取文件：12-抚养比.xls
+正在读取指标：铁路总公里数
+正在读取文件：13-铁路总公里数.xls
+正在读取指标：通电率（占人口的百分比）
+正在读取文件：14-API_EG.ELC.ACCS.ZS_DS2_zh_excel_v2_10578337.xls
+正在导出数据...
+导出数据成功：D:\Python\big_data_analysis_group3\raw data\\Result.xls
+
+运行时间：Mon May 27 15:30:34 2019
+正在读取指标：利差（贷款利率减去存款利率，百分比）
+正在读取文件：1-API_FR.INR.LNDP_DS2_zh_excel_v2_10580302.xls
+正在读取指标：存款利率
+正在读取文件：2-API_FR.INR.DPST_DS2_zh_excel_v2_10578187.xls
+正在读取指标：股票交易总额（占国民生产总值（GDP）的比例）
+正在读取文件：3-API_CM.MKT.TRAD.GD.ZS_DS2_zh_excel_v2_10579127.xls
+正在读取指标：商品出口（现价美元）
+正在读取文件：4-API_TX.VAL.MRCH.CD.WT_DS2_zh_excel_v2_10578296.xls
+正在读取指标：商品进口（现价美元）
+正在读取文件：5-API_TM.VAL.MRCH.CD.WT_DS2_zh_excel_v2_10578328.xls
+正在读取指标：国际旅游，收入（占总出口的百分比）
+正在读取文件：6-API_ST.INT.RCPT.XP.ZS_DS2_zh_excel_v2_10580016.xls
+正在读取指标：国际旅游，支出（占总进口的百分比）
+正在读取文件：7-API_ST.INT.XPND.MP.ZS_DS2_zh_excel_v2_10588128.xls
+正在读取指标：高科技出口（现价美元）
+正在读取文件：8-API_TX.VAL.TECH.CD_DS2_zh_excel_v2_10578375.xls
+正在读取指标：识字率，青年男性（占 15-24 岁男性人口的百分比）
+正在读取文件：9-API_SE.ADT.1524.LT.MA.ZS_DS2_zh_excel_v2_10597725
+运行时间：Mon May 27 15:31:43 2019
+正在读取指标：利差（贷款利率减去存款利率，百分比）
+正在读取文件：1-API_FR.INR.LNDP_DS2_zh_excel_v2_10580302.xls
+正在读取指标：存款利率
+正在读取文件：2-API_FR.INR.DPST_DS2_zh_excel_v2_10578187.xls
+正在读取指标：股票交易总额（占国民生产总值（GDP）的比例）
+正在读取文件：3-API_CM.MKT.TRAD.GD.ZS_DS2_zh_excel_v2_10579127.xls
+正在读取指标：商品出口（现价美元）
+正在读取文件：4-API_TX.VAL.MRCH.CD.WT_DS2_zh_excel_v2_10578296.xls
+正在读取指标：商品进口（现价美元）
+正在读取文件：5-API_TM.VAL.MRCH.CD.WT_DS2_zh_excel_v2_10578328.xls
+正在读取指标：国际旅游，收入（占总出口的百分比）
+正在读取文件：6-API_ST.INT.RCPT.XP.ZS_DS2_zh_excel_v2_10580016.xls
+正在读取指标：国际旅游，支出（占总进口的百分比）
+正在读取文件：7-API_ST.INT.XPND.MP.ZS_DS2_zh_excel_v2_10588128.xls
+正在读取指标：高科技出口（现价美元）
+正在读取文件：8-API_TX.VAL.TECH.CD_DS2_zh_excel_v2_10578375.xls
+正在读取指标：识字率，青年男性（占 15-24 岁男性人口的百分比）
+正在读取文件：9-API_SE.ADT.1524.LT.MA.ZS_DS2_zh_excel_v2_10597725.xls
+正在读取指标：工业男性就业人员（占男性就业的百分比）
+正在读取文件：10-API_SL.IND.EMPL.MA.ZS_DS2_zh_excel_v2_10598958.xls
+正在读取指标：城市化率
+正在读取文件：11-城市化率.xls
+正在读取指标：抚养比
+正在读取文件：12-抚养比.xls
+正在读取指标：铁路总公里数
+正在读取文件：13-铁路总公里数.xls
+正在读取指标：通电率（占人口的百分比）
+正在读取文件：14-API_EG.ELC.ACCS.ZS_DS2_zh_excel_v2_10578337.xls
+正在导出数据...
+导出数据成功：D:\Python\big_data_analysis_group3\raw data\\Result.xls
+
+运行时间：Mon May 27 15:35:49 2019
+正在读取指标：利差（贷款利率减去存款利率，百分比）
+正在读取文件：1-API_FR.INR.LNDP_DS2_zh_excel_v2_10580302.xls
+正在读取指标：存款利率
+正在读取文件：2-API_FR.INR.DPST_DS2_zh_excel_v2_10578187.xls
+正在读取指标：股票交易总额（占国民生产总值（GDP）的比例）
+正在读取文件：3-API_CM.MKT.TRAD.GD.ZS_DS2_zh_excel_v2_10579127.xls
+正在读取指标：商品出口（现价美元）
+正在读取文件：4-API_TX.VAL.MRCH.CD.WT_DS2_zh_excel_v2_10578296.xls
+正在读取指标：商品进口（现价美元）
+正在读取文件：5-API_TM.VAL.MRCH.CD.WT_DS2_zh_excel_v2_10578328.xls
+正在读取指标：国际旅游，收入（占总出口的百分比）
+正在读取文件：6-API_ST.INT.RCPT.XP.ZS_DS2_zh_excel_v2_10580016.xls
+正在读取指标：国际旅游，支出（占总进口的百分比）
+正在读取文件：7-API_ST.INT.XPND.MP.ZS_DS2_zh_excel_v2_10588128.xls
+正在读取指标：高科技出口（现价美元）
+正在读取文件：8-API_TX.VAL.TECH.CD_DS2_zh_excel_v2_10578375.xls
+正在读取指标：识字率，青年男性（占 15-24 岁男性人口的百分比）
+正在读取文件：9-API_SE.ADT.1524.LT.MA.ZS_DS2_zh_excel_v2_10597725.xls
+正在读取指标：工业男性就业人员（占男性就业的百分比）
+正在读取文件：10-API_SL.IND.EMPL.MA.ZS_DS2_zh_excel_v2_10598958.xls
+正在读取指标：城市化率
+正在读取文件：11-城市化率.xls
+正在读取指标：抚养比
+正在读取文件：12-抚养比.xls
+正在读取指标：铁路总公里数
+正在读取文件：13-铁路总公里数.xls
+正在读取指标：通电率（占人口的百分比）
+正在读取文件：14-API_EG.ELC.ACCS.ZS_DS2_zh_excel_v2_10578337.xls
+正在导出数据...
+导出数据成功：D:\Python\big_data_analysis_group3\raw data\\Result.xls
+
