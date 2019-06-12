@@ -5,7 +5,6 @@
 # -*- coding:utf-8 -*-
 # Author: Nick
 import pandas as pd
-import time
 
 # data_cleaning1.py用以清洗数据，生成行为国家，列为指标，每一个sheet为每一年的excel文件
 folder = r'D:\Python\big_data_analysis_group3\raw data\\'  # 设置工作目录
@@ -23,9 +22,7 @@ def initiate_new_data():  # initiate_new_data函数用以初始化new_data这个
     for i in country_list:
         country_name.append(i.split(',')[0])  # country_name列表存储国家名字
         country_code.append(i.split(',')[1])  # country_code列表存储国家代码
-    dataframe = {}
-    dataframe['国家名'] = country_name
-    dataframe['国家代码'] = country_code
+    dataframe = {'国家名': country_name, '国家代码': country_code}
     for i in range(start_year, end_year + 1):
         dataframe[i] = None
     for i in range(16):  # 对new_data的每一个元素初始化，使DataFrame的前两列初始化为国家名和国家代码; 产生16个sheet，每个指标一个sheet
@@ -35,42 +32,26 @@ def initiate_new_data():  # initiate_new_data函数用以初始化new_data这个
 
 def read_data(index, name, file):
     # 读入名为name的指标，其对应的excel文件为file
-    log('read', (name, file))
+    print('正在读入{}指标'.format(name))
     data = pd.read_excel(folder + file, 'Data', header=3)  # 读取指标对应的excel文件，header=3意思是表头在第3行
     for i in range(data.shape[0]):  # 穷举data的每一行数据，shape[0]获取DataFrame的行数
         global start_year, end_year
         for j in range(start_year, end_year):
             try:
                 new_data[index].loc[data.iloc[i, 0]][j] = data.iloc[i][str(j)]
-            except:
+            finally:
                 pass
     return None
 
 
 def write_data():
     # 利用pandas的ExcelWriter将结果输出到结果excel里
-    log('write', '正在导出数据...')
     writer = pd.ExcelWriter(folder[:-10] + "Result_2.xls")
     for i in range(16):
         new_data[i].to_excel(writer, sheet_name='指标'+str(i+1), header=True, index=False)
     writer.save()
     writer.close()
-    log('write', '导出数据成功：{}\n'.format(folder + 'Result_2.xls'))
     return None
-
-
-def log(mode, content):
-    # 产生日志文件
-    f = open(folder[:-10] + 'log.txt', 'a+')
-    if mode == 'init':
-        localtime = time.asctime(time.localtime(time.time()))
-        f.writelines('运行时间：{}\n'.format(localtime))
-    if mode == 'read':
-        f.writelines('正在读取指标：{}\n'.format(content[0]))
-        f.writelines('正在读取文件：{}\n'.format(content[1]))
-    if mode == 'write':
-        f.writelines('{}\n'.format(content))
-    f.close()
 
 
 if __name__ == '__main__':
@@ -78,7 +59,6 @@ if __name__ == '__main__':
     f = open(folder + '指标列表.csv', 'r')
     files = f.readlines()
     f.close()
-    log('init', '')
 
     initiate_new_data()  # 初始化new_data，用以存储清洗后的数据
 

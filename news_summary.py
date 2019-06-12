@@ -1,22 +1,21 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*- 
 # Author: Nick
-# import jieba
 import jieba.analyse
 import pandas as pd
-import os
 import csv
 
 
 def sum_word_freq(files):
     words_except = ['，', ',', '。', '的', '、', '和', '”', '“', '是', '了', '要', '为', '等', '同', '对', '\n', '!', '在', '将', '与',
                     '年', '中', '也', '月', '说']
-    print('正在读取文件：{}'.format(files))
+    print(f'正在读取文件：{files}')
     ans = {}
     news = pd.read_csv('{}.csv'.format(files), header=0, index_col=0, encoding='utf-8')
     for rows in range(news.shape[0]):
         print('正在处理第{}条新闻'.format(rows + 1))
         news_content = news.iloc[rows, 1]  # 获取新闻内容
+        news_content_list=[]
         if pd.notna(news_content):
             jieba.suggest_freq('一带一路', True)  # 手动调整“一带一路”词频，使之分词后为一个整体
             news_content_list = jieba.cut(news_content)
@@ -46,7 +45,7 @@ def sum_word_freq_country(file):
 
 
 if __name__ == '__main__':
-    files = ['D:\\Python\\big_data_analysis_group3\\news\\'+i for i in ['20190611 154754_高层动态','20190611 161819_海外新闻']]
+    files = ['D:\\Python\\big_data_analysis_group3\\news\\'+i for i in ['20190611 154754_高层动态', '20190611 161819_海外新闻']]
     for i in files:
         sum_word_freq(i)
         sum_word_freq_country(i)
