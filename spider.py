@@ -21,7 +21,7 @@ def get_news_list(category):
                 re = requests.get(
                     url='https://www.yidaiyilu.gov.cn/info/iList.jsp?cat_id=10149&cur_page={}'.format(str(pages)),
                     headers=header)
-            finally:
+            except:
                 print('服务器已限制访问，请等待30s后自动重试')
                 time.sleep(30)
                 re = requests.get(
@@ -90,10 +90,8 @@ def get_news_content(news_list):
         soup = BeautifulSoup(html, features="html.parser")
         contents = soup.find_all('p', style='text-indent:2em;')
         for i in contents[:-1]:
-            try:
+            if i.string is not None:
                 news += i.string.strip('\n\t')
-            finally:
-                pass
         news_content.loc[ind] = [titles, news]
     return news_content
 
@@ -106,6 +104,7 @@ def write(df, name):  # df 为新闻的内容; names为新闻分类的名字
 
 if __name__ == '__main__':
     category_list = ['高层动态', '海外新闻']
+    category_list = ['海外新闻']
     for i in category_list:
         print('正在读取“{}”的新闻列表：'.format(i))
         news_list = get_news_list(i)
